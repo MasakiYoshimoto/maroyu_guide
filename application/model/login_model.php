@@ -1,5 +1,6 @@
 <?php
-require_once("database_conf.php");
+require_once(__DIR__."/../conf/master_conf.php");
+require_once(__DIR__."/../conf/database_conf.php");
 
 function getLoginData($id,$pass){
   $cn = conectDatabase();

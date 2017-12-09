@@ -1,6 +1,7 @@
 <?php
-require_once("login_model.php");
-session_start();
+require_once(__DIR__."/../conf/master_conf.php");
+require_once(__DIR__."/../model/login_model.php");
+
 unset($_SESSION['error']);
 unset($_SESSION['user_info']);
 
