@@ -1,0 +1,19 @@
+<?php require_once("login_controller.php");?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>maroyu_guide</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr><td>ユーザーID</td><td>ユーザー名</td></tr>
+      </thead>
+      <tbody>
+        <tr><td><?=$_SESSION['user_info']['user_id']?></td><td><?=$_SESSION['user_info']['user_name']?></td></tr>
+      </tbody>
+    </table>
+    <img src="./img/Hedgehog.jpeg" alt="ハリネズミ" title="ハリネズミの画像">
+  </body>
+</html>

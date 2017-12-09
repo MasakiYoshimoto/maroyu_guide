@@ -1,0 +1,42 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>maroyu guide</title>
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <div class="contents">
+      <form action="login_confirm.html" method="post">
+        <h1>Welcome to maroyu_guide!!!</h1>
+        <?php if(!empty($_SESSION['error']['all'])): ?>
+          <div class="red">
+            <?=$_SESSION['error']['all']['error_msg']?>
+          </div>
+        <?php endif; ?>
+        <?php if(!empty($_SESSION['error']['user_id'])): ?>
+          <div class="red">
+            <?=$_SESSION['error']['user_id']['error_msg']?>
+          </div>
+        <?php endif; ?>
+          <input type="text" class="login_input" name="id" value="" placeholder="idを入力してください">
+          <?php if(!empty($_SESSION['error']['user_pass'])): ?>
+            <div class="red">
+              <?=$_SESSION['error']['user_pass']['error_msg']?>
+            </div>
+          <?php endif; ?>
+          <input type="text" class="login_input" name="pass" value="" placeholder="passを入力してください">
+          <input class="red_button" type="submit" name="" value="ログイン">
+          <table>
+            <tr class="head">
+              <td>aaa</td><td>bbbb</td>
+            </tr>
+            <tr>
+              <td>ccc</td><td>dddd</td>
+            </tr>
+          </table>
+      </form>
+    </div>
+  </body>
+</html>
